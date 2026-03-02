@@ -85,6 +85,8 @@ header .container::before {
         top: 90px;
         left: 0;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1rem 0;
     }
 }
 
@@ -202,8 +204,7 @@ header nav ul li a.active {
 
 @media (max-width:767px) {
     .header_list {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 1rem 0;
+        
     }
 
     .header_list li {
@@ -267,4 +268,5 @@ header nav ul li a.active {
 }
 
 /* end landing */
+
 
