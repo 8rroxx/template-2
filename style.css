@@ -9,7 +9,6 @@
 }
 
 /* end root */
-
 /* start global */
 * {
     padding: 0;
@@ -34,9 +33,7 @@ a {
 }
 
 /* end global */
-
 /* start header */
-
 header {
     position: absolute;
     width: 100%;
@@ -56,7 +53,7 @@ header .container::before {
     bottom: 0;
     left: 1rem;
     height: 1px;
-    width: calc(100% - 1rem);
+    width: calc(100% - 2rem);
     background-color: #fff;
 }
 
@@ -147,5 +144,122 @@ header nav ul li a.active {
     z-index: -1;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    max-height: 100%;
+    width: 50%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 198, 252, 0.3);
+    z-index: -1;
+}
+
+.landing .container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.overlay-content {
+    position: absolute;
+    height: 300px;
+    max-height: 100%;
+    width: 50%;
+    max-width: 100%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 2rem;
+    color: #fff;
+}
+
+.overlay-content h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.overlay-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width:767px) {
+    .overlay::before {
+        width: 100%;
+    }
+
+    .overlay-content {
+        width: 100%;
+    }
+
+    .overlay-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .overlay-content p {
+        font-size: 10px;
+    }
+}
+
+.left,
+.right {
+    font-size: 32px;
+    color: #fff;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0 0.5rem;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 0.5rem;
+}
+
+.bullets {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.bullet {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.bullet.active {
+    background-color: var(--main-color);
+}
 
 /* end landing */
