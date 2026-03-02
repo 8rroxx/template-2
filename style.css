@@ -201,6 +201,16 @@ header nav ul li a.active {
 }
 
 @media (max-width:767px) {
+
+    .header_list {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1rem 0;
+    }
+
+    .header_list li {
+        padding: 1rem 0;
+    }
+
     .overlay::before {
         width: 100%;
     }
